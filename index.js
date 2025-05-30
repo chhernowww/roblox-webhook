@@ -15,11 +15,8 @@ app.post("/deploy", async (req, res) => {
 
     const embed = {
         title: "Deployment Initiated",
-<<<<<<< HEAD
-=======
-        description: link ? `[Join Deployment](${link})` : undefined,
->>>>>>> 6d64e4a (Add deploy link to webhook payload)
-        color: 0,
+        description: link ? `[JOIN](${link})` : undefined,
+        color: 1710618,
         fields: [
             { name: "Team", value: teamName, inline: true },
             { name: "Operation Leader", value: leader, inline: true },
