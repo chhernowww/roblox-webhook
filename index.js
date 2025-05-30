@@ -7,7 +7,7 @@ const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1377851622641893416/62
 app.use(express.json());
 
 app.post("/deploy", async (req, res) => {
-    const { teamName, leader, teamMembers } = req.body;
+    const { teamName, leader, teamMembers, link } = req.body;
 
     if (!teamName || !leader || !Array.isArray(teamMembers)) {
         return res.status(400).send("Invalid payload");
@@ -15,6 +15,10 @@ app.post("/deploy", async (req, res) => {
 
     const embed = {
         title: "Deployment Initiated",
+<<<<<<< HEAD
+=======
+        description: link ? `[Join Deployment](${link})` : undefined,
+>>>>>>> 6d64e4a (Add deploy link to webhook payload)
         color: 0,
         fields: [
             { name: "Team", value: teamName, inline: true },
