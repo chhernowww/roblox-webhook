@@ -16,7 +16,7 @@ app.post("/deploy", async (req, res) => {
     const embed = {
         title: "Deployment Initiated",
         description: link ? `[▬ JOIN DEPLOYMENT ▬](${link})` : undefined,
-        color: 0,
+        color: 1710618,
         fields: [
             { name: "Team", value: teamName, inline: true },
             { name: "Operation Leader", value: leader, inline: true },
