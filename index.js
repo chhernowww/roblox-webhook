@@ -14,8 +14,8 @@ app.post("/deploy", async (req, res) => {
     }
 
     const embed = {
-        title: "🚨 Deployment Initiated",
-        color: 16753920,
+        title: "Deployment Initiated",
+        color: 0,
         fields: [
             { name: "Team", value: teamName, inline: true },
             { name: "Operation Leader", value: leader, inline: true },
